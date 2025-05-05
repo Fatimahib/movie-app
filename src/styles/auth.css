@@ -1,0 +1,29 @@
+.custom-linear-gradient {
+    position: relative;
+  }
+  
+  .custom-linear-gradient::before,
+  .custom-linear-gradient::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(0deg, transparent, #ff4b45);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  }
+  
+  .custom-linear-gradient::after {
+    animation-delay: -3s;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
